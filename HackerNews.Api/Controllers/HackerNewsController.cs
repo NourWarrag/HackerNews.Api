@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HackerNews.Api.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[ResponseCache(CacheProfileName = "Default30")]
 public class HackerNewsController : ControllerBase
 {
     private readonly IHackerNewsService _hackerNewsService;
