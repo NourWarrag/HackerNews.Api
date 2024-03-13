@@ -17,6 +17,10 @@ public class HackerNewsController : ControllerBase
     [HttpGet("TopStories")]
     public async Task<List<StoryDto>> GetHackerNewsAsync([FromQuery] int numberOfStories)
     {
+        if(numberOfStories <= 0)
+        {
+            return new List<StoryDto>();
+        }
         var stories = await _hackerNewsService.GetHackerNewsAsync(numberOfStories);
         return stories.Select(s => new StoryDto
         {
