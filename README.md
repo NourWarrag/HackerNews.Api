@@ -29,7 +29,7 @@ This project is an ASP.NET Core Web API that fetches and returns top stories fro
 ## Enhancements
 
 - Add error handling for when the Hacker News API is unavailable or returns an error
-- Add caching and api Key.
+- Add more sophisticated caching and API Keys.
 ## Built With
 
 - ASP.NET Core 8.0
